@@ -5,12 +5,13 @@ import { MainPageAsync } from "./pages/MainPage/MainPage.async";
 import { AboutPageAsync } from "./pages/AboutPage/AboutPage.async";
 import { CounterPageAsync } from "./pages/CounterPage/CounterPage.async";
 import { useTheme } from "./theme/useTheme";
+import { classNames } from "./helpers/classNames/classNames";
 
 const App = () => {
   const {theme, toggleTheme} = useTheme()
 
   return (
-    <div className={`app ${theme}`}>
+    <div className={classNames('app', {}, [theme])}>
       <Link className={'link'} to={'/'}>Главная</Link>
       <Link className={'link'} to={'/about'}>О сайте</Link>
       <Link className={'link'} to={'/counter'}>Счётчик</Link>
