@@ -1,6 +1,6 @@
-import webpack from "webpack";
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
-import { BuildOptions } from "./types/config";
+import webpack from 'webpack';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import { BuildOptions } from './types/config';
 
 export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
   const svgLoader = {
@@ -22,7 +22,7 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
     use: [
       options.isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
       {
-        loader: "css-loader",
+        loader: 'css-loader',
         options: {
           modules: {
             auto: (resPath: string) => Boolean(resPath.includes('.module.')),
@@ -30,9 +30,9 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
           },
         }
       },
-      "sass-loader",
+      'sass-loader',
     ],
-  }
+  };
 
   const babelLoader = {
     test: /\.(js|jsx|ts|tsx)$/,
@@ -45,25 +45,25 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
         ],
         plugins: [
           [
-            "i18next-extract",
+            'i18next-extract',
             {
-              "locales": [
-                "ru",
-                "en"
+              'locales': [
+                'ru',
+                'en'
               ],
-              "keyAsDefaultValue": true
+              'keyAsDefaultValue': true
             }
           ]
         ]
       }
     }
-  }
+  };
 
   const typescriptLoader: webpack.RuleSetRule = {
     test: /\.tsx?$/,
     use: 'ts-loader',
     exclude: /node_modules/,
-  }
+  };
 
   return [
     fileLoader,
@@ -71,5 +71,5 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
     babelLoader,
     typescriptLoader,
     cssLoaders,
-  ]
+  ];
 }
