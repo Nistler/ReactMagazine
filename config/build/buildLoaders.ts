@@ -42,7 +42,18 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
       options: {
         presets: [
           '@babel/preset-env',
-          "@babel/preset-react",
+        ],
+        plugins: [
+          [
+            "i18next-extract",
+            {
+              "locales": [
+                "ru",
+                "en"
+              ],
+              "keyAsDefaultValue": true
+            }
+          ]
         ]
       }
     }
