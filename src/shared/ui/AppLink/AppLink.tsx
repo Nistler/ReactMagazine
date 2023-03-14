@@ -1,4 +1,3 @@
-import React from 'react';
 import { classNames } from 'shared/lib';
 import type { FC } from 'react';
 import type { LinkProps } from 'react-router-dom';

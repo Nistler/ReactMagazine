@@ -38,7 +38,6 @@ module.exports = {
     'import/extensions': 0,
     'no-mixed-spaces-and-tabs': [2, 'smart-tabs'],
     '@typescript-eslint/consistent-type-imports': 'warn',
-
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     'max-len': ['warn', { code: 140, ignorePattern: '^import .*' }],
     '@typescript-eslint/ban-ts-comment': 'warn',
@@ -52,9 +51,10 @@ module.exports = {
     '@typescript-eslint/no-var-requires': 0,
     'react/button-has-type': 0,
     'no-shadow': 0,
-    'no-unused-vars': 0,
+    'no-unused-vars': 'warn',
     'react/function-component-definition': 0,
     'react/jsx-props-no-spreading': 0,
     'no-undef': 0,
+    'react/react-in-jsx-scope': 0,
   },
 };
