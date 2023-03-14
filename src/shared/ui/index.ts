@@ -1,6 +1,5 @@
-import { Button, ThemeButton } from "./Button/Button";
-import { AppLink, AppLinkTheme } from "./AppLink/AppLink";
-
+import { Button, ThemeButton } from './Button/Button';
+import { AppLink, AppLinkTheme } from './AppLink/AppLink';
 
 export {
   Button,

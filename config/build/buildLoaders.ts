@@ -1,6 +1,6 @@
-import webpack from 'webpack';
+import type webpack from 'webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import { BuildOptions } from './types/config';
+import type { BuildOptions } from './types/config';
 
 export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
   const svgLoader = {
@@ -26,9 +26,9 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
         options: {
           modules: {
             auto: (resPath: string) => Boolean(resPath.includes('.module.')),
-            localIdentName: options.isDev ? '[path][name]__[local]' : '[hash:base64:8]'
+            localIdentName: options.isDev ? '[path][name]__[local]' : '[hash:base64:8]',
           },
-        }
+        },
       },
       'sass-loader',
     ],
@@ -47,16 +47,16 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
           [
             'i18next-extract',
             {
-              'locales': [
+              locales: [
                 'ru',
-                'en'
+                'en',
               ],
-              'keyAsDefaultValue': true
-            }
-          ]
-        ]
-      }
-    }
+              keyAsDefaultValue: true,
+            },
+          ],
+        ],
+      },
+    },
   };
 
   const typescriptLoader: webpack.RuleSetRule = {
