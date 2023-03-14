@@ -7,6 +7,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:i18next/recommended',
     'airbnb',
   ],
   overrides: [
@@ -19,6 +20,7 @@ module.exports = {
   plugins: [
     'react',
     '@typescript-eslint',
+    'i18next',
   ],
   rules: {
     'linebreak-style': [
@@ -54,6 +56,7 @@ module.exports = {
     'react/function-component-definition': 0,
     'react/jsx-props-no-spreading': 0,
     'react/react-in-jsx-scope': 0,
+    'i18next/no-literal-string': ['error', { markupOnly: true, onlyAttribute: [''] }],
   },
   globals: {
     __IS_DEV__: true,
