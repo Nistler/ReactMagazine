@@ -53,7 +53,9 @@ module.exports = {
     'no-unused-vars': 0,
     'react/function-component-definition': 0,
     'react/jsx-props-no-spreading': 0,
-    'no-undef': 0,
     'react/react-in-jsx-scope': 0,
+  },
+  globals: {
+    __IS_DEV__: true,
   },
 };
