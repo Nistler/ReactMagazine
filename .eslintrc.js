@@ -42,7 +42,7 @@ module.exports = {
     'no-mixed-spaces-and-tabs': [2, 'smart-tabs'],
     '@typescript-eslint/consistent-type-imports': 'warn',
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
-    'max-len': ['warn', { code: 140, ignorePattern: '^import .*' }],
+    'max-len': ['warn', { code: 140, ignorePattern: '^import .*', ignoreComments: true }],
     '@typescript-eslint/ban-ts-comment': 'warn',
     'import/prefer-default-export': 'off',
     'class-methods-use-this': 0,
