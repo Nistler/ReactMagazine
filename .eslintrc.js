@@ -12,6 +12,10 @@ module.exports = {
     'airbnb',
   ],
   overrides: [
+    {
+      files: ['**/src/**/*.test.{ts,tsx}'],
+      rules: { 'i18next/no-literal-string': 0 },
+    },
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
