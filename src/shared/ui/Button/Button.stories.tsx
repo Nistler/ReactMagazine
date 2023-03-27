@@ -1,4 +1,4 @@
-import { Button } from 'shared/ui';
+import { Button, ThemeButton } from 'shared/ui';
 import type { ComponentMeta, ComponentStory } from '@storybook/react';
 
 export default {
@@ -9,3 +9,12 @@ export default {
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
 export const Primary = Template.bind({});
+Primary.args = {
+  children: 'Button',
+};
+
+export const Clear = Template.bind({});
+Clear.args = {
+  children: 'Button',
+  theme: ThemeButton.CLEAR,
+};
