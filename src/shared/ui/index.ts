@@ -1,10 +1,10 @@
 import { Loader } from 'shared/ui/Loader/Loader';
-import { Button, ThemeButton } from './Button/Button';
+import { Button, ButtonTheme } from './Button/Button';
 import { AppLink, AppLinkTheme } from './AppLink/AppLink';
 
 export {
   Button,
-  ThemeButton,
+  ButtonTheme,
   AppLink,
   AppLinkTheme,
   Loader,

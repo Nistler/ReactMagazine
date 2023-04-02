@@ -1,9 +1,9 @@
 import { render, screen } from '@testing-library/react';
-import { Button, ThemeButton } from 'shared/ui';
+import { Button, ButtonTheme } from 'shared/ui';
 
 describe('Button', () => {
   test('only class', () => {
-    render(<Button theme={ThemeButton.CLEAR}>TEST</Button>);
+    render(<Button theme={ButtonTheme.CLEAR}>TEST</Button>);
     expect(screen.getByText('TEST')).toBeInTheDocument();
     screen.debug();
   });
