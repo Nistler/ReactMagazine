@@ -26,6 +26,7 @@ module.exports = {
     'react',
     '@typescript-eslint',
     'i18next',
+    'react-hooks',
   ],
   rules: {
     'linebreak-style': [
@@ -64,6 +65,8 @@ module.exports = {
     'i18next/no-literal-string': ['error', { markupOnly: true, onlyAttribute: [''] }],
     'jsx-a11y/no-static-element-interactions': 0,
     'jsx-a11y/click-events-have-key-events': 0,
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'error',
   },
   globals: {
     __IS_DEV__: true,
