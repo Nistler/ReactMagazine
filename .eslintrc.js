@@ -13,8 +13,11 @@ module.exports = {
   ],
   overrides: [
     {
-      files: ['**/src/**/*.test.{ts,tsx}'],
-      rules: { 'i18next/no-literal-string': 0 },
+      files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
+      rules: {
+        'i18next/no-literal-string': 0,
+        'max-len': 0,
+      },
     },
   ],
   parser: '@typescript-eslint/parser',
