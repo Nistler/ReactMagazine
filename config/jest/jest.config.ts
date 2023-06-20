@@ -33,6 +33,7 @@ export default {
   moduleNameMapper: {
     '\\.scss$': 'identity-obj-proxy',
     '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
+    'entities/(.*)': '<rootDir>src/entities/$1',
   },
   // All imported modules in your tests should be mocked automatically
   // automock: false,
