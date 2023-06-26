@@ -5,7 +5,6 @@ import React, {
 } from 'react';
 import isFunction from 'lodash/isFunction';
 import { Portal } from 'shared/ui/Portal/Portal';
-import { useTheme } from 'app/providers/ThemeProvider';
 import cls from './Modal.module.scss';
 
 interface ModalProps {
@@ -26,7 +25,6 @@ export const Modal = (props: ModalProps) => {
   const ANIMATION_DELAY = 300;
 
   const [isClosing, setIsClosing] = useState(false);
-  const { theme } = useTheme();
   const timerRef = useRef<ReturnType<typeof setTimeout>>();
 
   const closeHandler = useCallback(() => {
@@ -67,7 +65,7 @@ export const Modal = (props: ModalProps) => {
 
   return (
     <Portal>
-      <div className={classNames(cls.Modal, mods, [className, theme, 'app_modal'])}>
+      <div className={classNames(cls.Modal, mods, [className])}>
         <div className={cls.overlay} onClick={closeHandler}>
           <div className={cls.content} onClick={onContentClick}>
             {children}
