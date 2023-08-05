@@ -1,5 +1,3 @@
-import { classNames } from 'shared/lib';
-import { useTranslation } from 'react-i18next';
 import type { FC } from 'react';
 import { useEffect } from 'react';
 import { useDispatch, useStore } from 'react-redux';
